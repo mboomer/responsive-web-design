@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title>CSS Grid</title>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            #parent {
+                background: rgba(0,0,0,0.5);
+                display: grid;                              /* only direct descendents inside the grid become grid elements */
+                                                            /* nested elements within child elements are not grid elements  */
+                /* grid-template-columns: 33% 33% 33%;         /* specify 3 equally sized columns - not 1% at right is not filled */
+                grid-template-columns: auto auto auto;         /* specify 3 equally sized columns */
+            }
+            .child1 {
+                background: skyblue;
+            }
+            .child2 {
+                background: powderblue;
+            }
+            .child3 {
+                background: cadetblue;
+            }
+            .child4 {
+                background: indianred;
+            }
+            .child5 {
+                background: salmon;
+            }
+            .child6 {
+                background: firebrick;
+            }
+        </style>
+    </head>
+   <body>
+       <!-- we have 1 parent and 12 child items displayed in a grid with 3 columns
+            the grid has no width set so always takes up 100% of available width  
+            the 12 children have to fit ito 3 columns and so create 4 rows        
+        -->
+       <div id="parent">
+       
+            <div class="child1">Sky Blue</div>
+            <div class="child2">Powder Blue</div>
+            <div class="child3">Cadet Blue</div>
+            <div class="child4">Indian Red</div>
+            <div class="child5">Salmon</div>
+            <div class="child6">Fire Brick</div>
+            <div class="child1">Sky Blue</div>
+            <div class="child2">Powder Blue</div>
+            <div class="child3">Cadet Blue</div>
+            <div class="child4">Indian Red</div>
+            <div class="child5">Salmon</div>
+            <div class="child6">Fire Brick</div>
+       </div>
+
+    </body>
+</html>
