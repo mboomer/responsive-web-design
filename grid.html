@@ -7,10 +7,15 @@
         <style>
             #parent {
                 background: rgba(0,0,0,0.5);
-                display: grid;                              /* only direct descendents inside the grid become grid elements */
-                                                            /* nested elements within child elements are not grid elements  */
-                /* grid-template-columns: 33% 33% 33%;         /* specify 3 equally sized columns - not 1% at right is not filled */
-                grid-template-columns: auto auto auto;         /* specify 3 equally sized columns */
+                display: grid;                                      /* only direct descendents inside the grid become grid elements */
+                                                                    /* nested elements within child elements are not grid elements  */
+                /* grid-template-columns: 33% 33% 33%;              /* specify 3 equally sized columns - note 1% at right is not filled     */
+                /* grid-template-columns: 250px auto 100px auto;    /* specify 4 columns 2 have set width 2 automatically expand/contract   */
+                /* grid-template-columns: 1fr 1fr 1fr;              /* fr=fraction - still specifies 3 equally sized columns                */
+                grid-template-columns: 1fr 2fr 1fr;                 /* fr=fraction - 3 cols but col2 twice the size of col1 and col3        */
+                grid-template-rows: 50px 50px;                      /* 2 rows each 50px in height -                                         */
+                                                                    /* if there > 2 rows the rest will remain at the default height         */
+                                                                    /* if there arent enough children to fill rows the body will show       */
             }
             .child1 {
                 background: skyblue;
